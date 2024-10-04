@@ -25,13 +25,12 @@ ENV \
   WORLD_SEED=0 \
   WORLD_MODE=0 \
   GAME_ID="" \
-  DATA_PATH="\config" \
+  DATA_PATH="/config" \
   MAX_PLAYERS=10 \
   SEASON=-1 \
   SERVER_IP="" \
   SERVER_PORT="" \
   LD_LIBRARY_PATH="/corekeeper-server/linux64/"
-
 
 # Install prerequisites
 RUN \
