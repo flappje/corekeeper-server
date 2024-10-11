@@ -1,7 +1,8 @@
 services:
-  core-keeper:
+  corekeeper:
+    container_name: corekeeper
     image: corekeeper-server
+    restart: always
     volumes:
       - ./corekeeper-server:/config
-    restart: always
     stop_grace_period: 2m

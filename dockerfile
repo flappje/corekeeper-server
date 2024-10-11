@@ -12,9 +12,6 @@ RUN steamcmd +force_install_dir /home/corekeeper-server +login anonymous +app_up
 FROM ghcr.io/linuxserver/baseimage-ubuntu:noble
 
 # set version label
-ARG BUILD_DATE
-ARG VERSION
-ARG PROWLARR_RELEASE
 LABEL build_version="Linuxserver.io version:- ${VERSION} Build-date:- ${BUILD_DATE}"
 LABEL maintainer="flappje"
 
@@ -55,6 +52,3 @@ COPY --chmod=0755 root/ /
 
 # ports and volumes
 VOLUME /config
-EXPOSE \
-  27015/udp \
-  27016/udp
