@@ -1,0 +1,9 @@
+docker build --tag corekeeper-server .
+
+docker run --rm -it --entrypoint bash corekeeper-server
+
+docker run -d --name corekeeper-server --volume ./save:/config corekeeper-server
+docker exec -it corekeeper-server bash
+
+docker stop corekeeper-server
+docker rm corekeeper-server

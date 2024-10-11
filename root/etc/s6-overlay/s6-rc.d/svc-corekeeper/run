@@ -1,0 +1,9 @@
+#!/usr/bin/with-contenv bash
+# shellcheck shell=bash
+
+echo "Starting Dedicated Server"
+echo " "
+cd /config
+xvfb-run --auto-servernum --server-args='-screen 0 1x1x24 -nolisten tcp' '/corekeeper-server/CoreKeeperServer'
+
+echo "done"
