@@ -1,9 +1,11 @@
 #!/usr/bin/with-contenv bash
 # shellcheck shell=bash
 
+touch "/var/log/CoreKeeperServer.log"
 #Build Parameters
 declare -a params
-params=(-batchmode -logfile "/var/log/CoreKeeperServerLog.log")
+params=(-batchmode)
+if [ ! -z "${LOGFILE}"     ]; then params=( "${params[@]}" -logfile "${LOGFILE}" ); fi
 if [ ! -z "${WORLD_INDEX}" ]; then params=( "${params[@]}" -world "${WORLD_INDEX}" ); fi
 if [ ! -z "${WORLD_NAME}"  ]; then params=( "${params[@]}" -worldname "${WORLD_NAME}" ); fi
 if [ ! -z "${WORLD_SEED}"  ]; then params=( "${params[@]}" -worldseed "${WORLD_SEED}" ); fi
