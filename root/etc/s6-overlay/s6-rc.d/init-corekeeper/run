@@ -19,4 +19,4 @@ if [ ! -z "${SERVER_PORT}" ]; then params=( "${params[@]}" -port "${SERVER_PORT}
 
 echo "settigns the following params for the game:"
 echo "${params[@]}"
-printf "${params[@]}" > /var/run/s6/container_environment/corekeeperserverparams
+printf %s "${params[@]}" > /var/run/s6/container_environment/corekeeperserverparams

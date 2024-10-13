@@ -27,7 +27,7 @@ ENV \
   SEASON=-1 \
   SERVER_IP="" \
   SERVER_PORT="" \
-  LOGFILE="/var/log/CoreKeeperServerLog.log" \
+  LOGFILE="/var/log/CoreKeeperServer.log" \
   LD_LIBRARY_PATH="/corekeeper-server/linux64/"
 
 # Install prerequisites
